@@ -1,0 +1,8 @@
+{
+  "name": "DidactiCat - Generador Curricular Primària (Decret 175/2022)",
+  "description": "Assistent expert en pedagogia i currículum d'Educació Primària de Catalunya (Decret 175/2022). Genera activitats didàctiques inclusives (DUA), a punt per imprimir en A4 i alineades curricularment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

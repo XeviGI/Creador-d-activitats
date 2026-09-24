@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+.font-school {
+  font-family: 'Comic Neue', cursive, sans-serif;
+}
+
+.font-cursive {
+  font-family: 'Schoolbell', cursive, sans-serif;
+}
+
+.font-pal {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
+/* Printing styles for A4 optimization */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.5cm 1.2cm 1.5cm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  /* Hide everything marked no-print */
+  .no-print,
+  nav,
+  header,
+  footer,
+  aside,
+  button,
+  .toast,
+  .action-bar {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Ensure print container takes full width with crisp black borders */
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Disable background colors that waste black toner */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}
